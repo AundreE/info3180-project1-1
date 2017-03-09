@@ -53,7 +53,8 @@ def profiles():
     user_list = [{"user": user.username, "userid": user.userid} for user in users]
     
     if request.method == "GET":
-        return render_template("view_all.html", users=users)
+        file_folder = app.config['UPLOAD_FOLDER']
+        return render_template("view_all.html", file_folder=file_folder, users=users)
     
     elif request.method == "POST":
         response = make_response(jsonify({"users": user_list}))                                           
@@ -66,7 +67,8 @@ def get_profile(userid):
     user = UserProfile.query.filter_by(userid=userid).first()
     
     if request.method == "GET":
-        return render_template("view_user.html", user=user)
+        file_folder = app.config['UPLOAD_FOLDER']
+        return render_template("view_user.html", file_folder=file_folder, user=user)
     
     elif request.method == "POST":
         if user is not None:
