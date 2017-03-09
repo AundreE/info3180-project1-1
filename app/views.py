@@ -77,11 +77,6 @@ def get_profile(userid):
         else:
             flash('No User Found', 'danger')
             return redirect(url_for("index"))
-            
-@app.after_request
-def add_header(response):
-    response.headers["Content-Type"] = "application/json"
-    return response
 
 def genId(fname, lname, age):
     nid = []

@@ -16,6 +16,16 @@
         
         <br/><br/>
         
+        <div id="navbar"></div>
+          <ul>
+            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
+          </ul>
+        </div>
+        
+        <br/><br/>
+        
         {% block main %} {% endblock %}
     </body>
 </html>
