@@ -5,10 +5,8 @@
 {% block main %}
 
 <div class="profile">
-    <div class="pic">
-        <img src="{{ url_for('static', filename='uploads/'+user.image) }}"></img>
-    </div>
-    
+    <img src="{{ url_for('static', filename='uploads/'+user.image) }}"></img>
+
     <div class="info">
         <span class="name">{{ user.first_name}} {{ user.last_name }}</span> <br/>
         <span class="cdate"><b>Profile Created On: </b>{{ user.profile_created_on }}</span> <br/><br/>

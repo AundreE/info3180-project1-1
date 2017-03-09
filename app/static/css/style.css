@@ -1,0 +1,57 @@
+/* For NavBar */
+#navbar{
+  position: relative;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    display: block;
+    color: white;
+    border-radius: 5px 5px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* For Profiles */
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+.pic{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+.info{
+    width: 400px;
+    float: right;
+}
+.profile{
+    border-radius: 25px;
+    background: gray;
+    border: 2px solid #000;
+    width: 650px;
+    padding: 20px;
+}
+.name{
+    font-size: 22px;
+    font-weight: bold;
+}
+.cdate{
+    font-size: 14px;
+}
