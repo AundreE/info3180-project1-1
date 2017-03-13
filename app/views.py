@@ -54,7 +54,7 @@ def profiles():
     
     if request.method == "GET":
         file_folder = app.config['UPLOAD_FOLDER']
-        return render_template("view_all.html", file_folder=file_folder, users=users)
+        return render_template("view_all.html", users=users)
     
     elif request.method == "POST":
         response = make_response(jsonify({"users": user_list}))                                           
@@ -68,7 +68,7 @@ def get_profile(userid):
     
     if request.method == "GET":
         file_folder = app.config['UPLOAD_FOLDER']
-        return render_template("view_user.html", file_folder=file_folder, user=user)
+        return render_template("view_user.html", user=user)
     
     elif request.method == "POST":
         if user is not None:
